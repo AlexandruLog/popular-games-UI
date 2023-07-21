@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #222022;
+  color: #fff;
+  user-select: none;
+}
+
+#pageTitle {
+  margin: 20px auto;
+  width: max-content;
+}
+
+/* Games Section Styles */
+
+.games {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  overflow: hidden;
+  width: 80px;
+  height: 80vh;
+  margin: 0 7px;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+.slide:hover {
+  box-shadow: 3px 3px 10px 3px #111;
+}
+
+.slide h3 {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  opacity: 0;
+  transition: 0.5s;
+  width: max-content;
+}
+
+.slide h2 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: 0.5s;
+  padding: 8px 14px;
+  border-radius: 5px;
+  background-color: #344044;
+}
+
+.slide img {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.slide video {
+  margin-left: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s;
+}
+
+/* ClassList Styles */
+
+.active-slide {
+  width: 700px;
+}
+
+.active-slide h2 {
+  opacity: 1;
+  transition-delay: 0.6s;
+  animation: slideNameAndPrice 0.6s;
+}
+
+.active-slide h3 {
+  opacity: 1;
+  transition-delay: 0.5s;
+  animation: slideNameAndPrice 0.6s;
+}
+
+.active-slide img {
+  opacity: 1;
+  transition-delay: 0.4s;
+  animation: slideSteamIcon 1s 0.4s ease;
+}
+
+.active-slide video {
+  opacity: 0.8;
+  transition-delay: 1.2s;
+  visibility: visible;
+  animation: slideSteamIcon 1s 0.4s ease;
+}
+
+@keyframes slideSteamIcon {
+  from {
+    transform: translateY(-500px);
+  }
+}
+
+@keyframes slideNameAndPrice {
+  from {
+    transform: translateY(300px);
+  }
+}
+
+footer h6 {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 0.8rem;
+}
